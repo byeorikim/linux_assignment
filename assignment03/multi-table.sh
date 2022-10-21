@@ -3,12 +3,12 @@ if [ -z $1 ] || [ -z $2 ]
 then
 	echo "Invalid input"
 	exit 0
-else
-       	if [ $1 -le 0 ] || [ $2 -le 0 ]
-	then
-		echo "Input must be greater than 0"
-		exit 0
-	fi
+fi
+
+if [ $1 -le 0 ] || [ $2 -le 0 ]
+then
+	echo "Input must be greater than 0"
+	exit 0
 fi
 
 for i in $(seq 1 $1)
